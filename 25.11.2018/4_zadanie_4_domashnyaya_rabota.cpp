@@ -3,24 +3,24 @@
 using namespace std;
 
 int main(){
-    int n, k = 0, size_;
+    int n, k = 0, a;
     bool* A;
     cin >> n;
     if (n >= 5)
-        size_ = 2*n;
+        a = 2*n;
     else
-        size_ = 3*n;
+        a = 3*n;
     if (n == 1)
-        size_ = 4*n;
+        a = 4*n;
     A = new bool (3*n);
     A[0] = A[1] = 0;
-    for (int i = 2; i <= size_; i++)
+    for (int i = 2; i <= a; i++)
         A[i] = 0;
-    for (int i = 2; i <= size_; i++)
+    for (int i = 2; i <= a; i++)
         if (!A[i])
-            for (int j = i+i; j <= size_; j+=i)
+            for (int j = i+i; j <= a; j+=i)
                 A[j] = 1;
-    for (int i = 2; i <= size_; i++){
+    for (int i = 2; i <= a; i++){
         if (k == n)
             break;
         if (A[i]){

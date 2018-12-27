@@ -10,7 +10,7 @@ int main(){
     {
         y = sqrt(x);
         x = x - y * y;
-	    cout << y << "  ";
+	    cout << y*y << "  ";
     };
     return 0;
 }
